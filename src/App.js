@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 //routes
 import routes from './routes';
@@ -8,6 +8,7 @@ import routes from './routes';
 import Fallback from './components/Fallback/Fallback';
 import AdminLayout from './layouts/AdminLayout';
 import ProtectedRoute from "./auth/ProtectedRoute"
+import { Redirect } from 'react-router-dom';
 
 const Login = React.lazy(() => import('./pages/LoginPage'));
 
@@ -20,6 +21,9 @@ function App() {
         <Routes>
           {/* public routes */}
           <Route path='login' element={<Login />} />
+
+          <Route path='/' element={<Navigate to="/dashboard" />} />
+
 
           {/* private routes */}
           <Route element={<ProtectedRoute />}>
