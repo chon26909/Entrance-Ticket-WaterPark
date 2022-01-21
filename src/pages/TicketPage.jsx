@@ -1,11 +1,6 @@
 import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Button, Grid } from 'semantic-ui-react'
-
-import AdminLayout from '../layouts/AdminLayout';
-
-import SellTicketPage from './SellTicketPage';
-
 
 const TicketPage = () => {
     return (
@@ -14,9 +9,9 @@ const TicketPage = () => {
             <Grid columns={2} >
                 <Grid.Column>
                     <Link to='create' >
-                        <Button color='twitter' size='big'>
+                        {/* <Button color='twitter' size='big'> */}
                             ขายบัตร
-                        </Button>
+                        {/* </Button> */}
                     </Link>
                 </Grid.Column>
 
