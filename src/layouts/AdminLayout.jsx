@@ -11,7 +11,8 @@ const AdminLayout = () => {
     return (
         <div>
             <Sidebar activeSidebar={activeSidebar} />
-            <div style={{ marginLeft: activeSidebar ? '230px' : '0', padding: '1.5rem 2rem' }}>
+            <div style={{ marginLeft: activeSidebar ? '230px' : '0', padding: '1.5rem 2rem', transition: '0.3s all linear' }}>
+                <button onClick={() => SetActiveSidebar(!activeSidebar)}> = </button>
                 <Outlet />
             </div>
         </div>
